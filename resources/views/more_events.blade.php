@@ -30,8 +30,52 @@
           <div class="cd-full-width first-slide">
             <div class="container">
               <div class="row">
-                <div class="col-md-12">
+
+
+
+
+
+                @php
+                $test=new App\Http\Controllers\EventsController;
+               // dd($test);
+                $events = $test->index();
+
+              //  dd($events);
+               @endphp
+               {{-- {{ $events=App\Http\Controllers\EventsController::more_event() }} --}}
+
+               @foreach($events as $event)
+
+               {{-- @dd($albums) --}}
+               <div class="content p-20 col-sm-6">
+
+                <a href="{{ url('events') }}">   <img src="img/Arunachalam.png"></a>
+                                   <h4>Dr A Arunachalam Mudaliyar Iyya</h4>
+                                   <br><br>
+<p style="color: white">{{ $event->event_title}}</p>
+
+                                   <div style="background-color:#FFBF00;padding-top:10px;padding-bottom:10px">
+                                       <p style="color: white"><b>Knowledge Session:</b></p>
+                                       <p style="color: white">How to Mange expenditure,existing business and new Startups</p>
+                                       <a href="{{ url('events') }}">  <button type="button" class="btn btn-white"> Register</button></a>
+                                   </div>
+
+
+                                 </div>
+
+
+
+                @endforeach
+
+
+
+                           {{-- @dd($albums) --}}
+
+
+
+             <!--   <div class="col-md-12">
                     <div class="content p-20 col-sm-6">
+
                      <a href="{{ url('events') }}">   <img src="img/Arunachalam.png"></a>
                                         <h4>Dr A Arunachalam Mudaliyar Iyya</h4>
                                         <br><br>
@@ -94,7 +138,7 @@
 
 
 
-              </div>
+              </div>-->
             </div>
           </div>
         </li>

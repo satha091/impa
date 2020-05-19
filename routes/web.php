@@ -29,6 +29,10 @@ Route::get('/project', function () {
 Route::get('/more_events', function () {
     return view('more_events');
 });
+Route::get('events/create', function () {
+    return view('events.create');
+});
+//Route::get('/more_events','EventsController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -36,3 +40,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+

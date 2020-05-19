@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Events extends Model
 {
     //
-    protected $table = 'ht_events_config';
+    protected $table = 'ht_event_configs';
 
     protected $fillable = [
         'event_title', 'event_desc', 'event_presenter_name', 'event_image', 'event_presenter_designation', 'event_presenter_org_details', 'event_date', 'event_time',

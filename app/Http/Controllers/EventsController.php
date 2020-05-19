@@ -28,8 +28,8 @@ class EventsController extends Controller
     {
         $events = Events::all();
         return $events;
-      //  return view('more_events',['more_events'=>$events]);
-     //   dd($events);exit;
+      // return view('more_events',['events'=>$events]);
+       // dd($events);
 
     }
 
@@ -101,5 +101,6 @@ class EventsController extends Controller
         // return $request->all();
 
     }
+
 
 }
