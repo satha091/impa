@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Events;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 class EventController extends Controller
 {
@@ -17,11 +19,15 @@ class EventController extends Controller
     {
         $this->middleware('auth');
     }
+    public function allevents()
+    {
+        $events = Events::all();
+        return view('events.allevent', ['events' => $events]);
+    }
     public function index()
     {
         $events = Events::all();
-        return $events;
-
+        return view('events.index', ['events' => $events]);
     }
 
     /**
@@ -46,7 +52,7 @@ class EventController extends Controller
 
 
         $request->validate([
-            'title' => 'required','regex:^[a-zA-Z\s\.]+$'
+            'title' => 'required', 'regex:^[a-zA-Z\s\.]+$'
         ]);
 
 
@@ -58,16 +64,15 @@ class EventController extends Controller
 
         $event->event_presenter_name = $request->get('presenter_name');
 
-        if($request->hasFile('image'))
-        {
+        if ($request->hasFile('image')) {
 
 
-        // $event->event_image = $request->get('image');
-        $imagename = time().'.'.$request->image->getClientOriginalExtension();
+            // $event->event_image = $request->get('image');
+            $imagename = time() . '.' . $request->image->getClientOriginalExtension();
 
-        $event->event_image = $imagename;
+            $event->event_image = $imagename;
 
-        $request->image->move(public_path('images'), $imagename);
+            $request->image->move(public_path('images'), $imagename);
         }
 
         $event->event_presenter_designation = $request->get('presenter_designation');
@@ -95,8 +100,7 @@ class EventController extends Controller
         $event->save();
 
         return back()
-            ->with('success','You have successfully created event');
-
+            ->with('success', 'You have successfully created event');
     }
 
     /**
@@ -105,8 +109,10 @@ class EventController extends Controller
      * @param  \App\Events  $events
      * @return \Illuminate\Http\Response
      */
-    public function show(Events $events)
+    public function show(Events $events, $id)
     {
+
+        return  $events->find($id);;
         //
     }
 
@@ -116,8 +122,10 @@ class EventController extends Controller
      * @param  \App\Events  $events
      * @return \Illuminate\Http\Response
      */
-    public function edit(Events $events)
+    public function edit(Events $events,$id)
     {
+       $event= $events->find($id);
+        return view('events.edit',['event'=>$event]);
         //
     }
 
@@ -130,6 +138,8 @@ class EventController extends Controller
      */
     public function update(Request $request, Events $events)
     {
+        $events->update()->$request->all();
+
         //
     }
 
@@ -139,8 +149,16 @@ class EventController extends Controller
      * @param  \App\Events  $events
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Events $events)
+    public function destroy(Events $events,$id)
     {
+        $event=$events->find($id);
+        $event->participants()->delete();
+        $event->delete();
+
+        // redirect
+        Session::flash('message', 'Successfully deleted the event!');
+       // return redirect(route('events.index'));
+        return redirect()->route('events.index');
         //
     }
 }

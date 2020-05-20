@@ -11,34 +11,26 @@
 |
 */
 
-// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@home');
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/events', function () {
-    return view('events');
-});
+
 Route::get('/about', function () {
     return view('about');
 });
 Route::get('/project', function () {
     return view('project');
 });
-Route::get('/more_events', function () {
-    return view('more_events');
-});
-Route::get('events/create', function () {
-    return view('events.create');
-});
-// Route::get('/more_events','EventsController@index');
-// Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/allevents', 'EventController@allevents')->name('events.all');
+Route::resource('events', 'EventController');
+
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('events', 'EventController');
