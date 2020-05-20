@@ -40,7 +40,7 @@
                // dd($test);
                 $events = $test->index();
 
-              //  dd($events);
+                dd($events);
                @endphp
                {{-- {{ $events=App\Http\Controllers\EventsController::more_event() }} --}}
 
