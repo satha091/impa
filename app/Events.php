@@ -22,9 +22,9 @@ class Events extends Model
     //     return $this->belongsTo(User::class);
     // }
 
-    // public function participants()
-    // {
-    //     return $this->hasMany(Participants::class);
-    // }
+    public function participants()
+    {
+        return $this->hasMany(EventTraker::class,'event_id');
+    }
 
 }

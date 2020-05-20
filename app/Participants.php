@@ -13,9 +13,9 @@ class Participants extends Model
     ];
 
 
-    // public function events()
-    // {
-    //     return $this->hasMany(Events::class);
-    // }
+    public function events()
+    {
+        return $this->hasMany(Events::class);
+    }
 
 }

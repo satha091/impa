@@ -56,7 +56,7 @@
 
 
                         <div class="primary-button">
-                            <a href="{{ url('more_events') }}">More Events</a>
+                            <a href="{{ route('events.all') }}">More Events</a>
                         </div>
                         <div style="margin-top: 22px;"></div>
                     </div>
