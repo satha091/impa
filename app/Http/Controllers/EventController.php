@@ -2,45 +2,48 @@
 
 namespace App\Http\Controllers;
 
+use App\Events;
 use Illuminate\Http\Request;
 
-use App\Events;
-
-
-
-
-class EventsController extends Controller
+class EventController extends Controller
 {
-
     /**
-     * Create a new controller instance.
+     * Display a listing of the resource.
      *
-     * @return void
+     * @return \Illuminate\Http\Response
      */
+
     public function __construct()
     {
         $this->middleware('auth');
     }
-
-
-
     public function index()
     {
         $events = Events::all();
         return $events;
-      // return view('more_events',['events'=>$events]);
-       // dd($events);
 
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
+        //
         return view('events.create');
-
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
+
 
         $request->validate([
             'title' => 'required','regex:^[a-zA-Z\s\.]+$'
@@ -86,7 +89,7 @@ class EventsController extends Controller
         $event->event_status = $request->get('status');
 
         $event->event_category = $request->get('category');
-
+        $event->created_by = auth()->user()->id;
         $event->updated_by = auth()->user()->id;
 
         $event->save();
@@ -94,9 +97,50 @@ class EventsController extends Controller
         return back()
             ->with('success','You have successfully created event');
 
-        // return $request->all();
-
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Events  $events
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Events $events)
+    {
+        //
+    }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Events  $events
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Events $events)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Events  $events
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Events $events)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Events  $events
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Events $events)
+    {
+        //
+    }
 }
