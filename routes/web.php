@@ -29,6 +29,7 @@ Route::get('/project', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/allevents', 'EventController@allevents')->name('events.all');
+Route::get('/index', 'EventController@index')->name('events.index');
 Route::resource('events', 'EventController');
 
 

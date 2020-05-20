@@ -1,24 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('master')
+@section('bootstrap')
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
 
-<body>
-    <table>
-        <th>
 
-        </th>
+
+@endsection
+
+
+@section('page-content')
+<style>
+.overlay{
+    background-color: white;
+}
+    </style>
+
+<div class="container">
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Event Title</th>
+                <th>Event Description</th>
+                <th>Event Presenter Name</th>
+                <th>Event Presenter Designation</th>
+                <th>Organization Details</th>
+                <th>Event Date</th>
+                <th>Show </th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
         <tbody>
             @foreach($events as $event)
                 <tr>
                     <td>{{  $event->id }}</td>
                     <td>{{  $event->event_title }}</td>
                     <td>{{  $event->event_desc }}</td>
+
+                    <td>{{  $event->event_presenter_name }}</td>
+                    <td>{{  $event->event_presenter_designation }}</td>
+                    <td>{{  $event->event_presenter_org_details }}</td>
+                    <td>{{  $event->event_date }}</td>
                     <td><a href="{{ route('events.show',['event'=>$event->id])  }}"> Show</a></td>
                     <td><a href="{{ route('events.edit',['event'=>$event->id])  }}"> Edit</a></td>
                     <td>
@@ -35,3 +61,4 @@
 </body>
 
 </html>
+@endsection

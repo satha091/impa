@@ -61,7 +61,7 @@ https://templatemo.com/tm-503-newline
                     <ul class="nav navbar-nav navbar-right" style="margin-right:50px;">
                       @auth
 
-                      <li><a href="{{ url('/home') }}"><span class="glyphicon glyphicon-user"></span> Home</a></li>
+                      <li><a href="{{ url('/index') }}"><span class="glyphicon glyphicon-user"></span> Home</a></li>
                       <li class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                               {{ Auth::user()->name }} <span class="caret"></span>
