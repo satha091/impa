@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// use Illuminate\Routing\Route;
+
+Route::get('/', 'HomeController@home');
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -32,13 +32,13 @@ Route::get('/more_events', function () {
 Route::get('events/create', function () {
     return view('events.create');
 });
-//Route::get('/more_events','EventsController@index');
+// Route::get('/more_events','EventsController@index');
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
+Route::resource('events', 'EventController');
