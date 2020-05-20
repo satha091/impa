@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="row" style="width: 100%">
                     <div class="col-md-12">
-                        <div class="content col-sm-6">
+                    <!--    <div class="content col-sm-6">
                             <a href="{{ url('events') }}"> <img src="img/Arunachalam.png"></a>
                             <h4>Dr A Arunachalam Mudaliyar Iyya</h4>
                             <br><br>
@@ -37,12 +37,12 @@
                                 <a href="{{ url('events') }}"> <button type="button"
                                         class="btn btn-white"> Register</button></a>
                             </div>
-                        </div>
+                        </div>-->
 
                         @foreach($events as $event)
                         {{ $event->id }}
-                        <div class="content p-20 col-sm-6">
-                            <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}"></a>
+                        <div class="content p-20 col-sm-6 h-75">
+                            <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle image-resize"></a>
                             <h4>{{ $event->event_presenter_name }}</h4>
                             <br><br>
                             <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
@@ -53,6 +53,7 @@
                             </div>
                         </div>
                          @endforeach
+
 
                         <div class="primary-button">
                             <a href="{{ url('more_events') }}">More Events</a>
