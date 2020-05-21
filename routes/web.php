@@ -27,10 +27,16 @@ Route::get('/project', function () {
 });
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/allevents', 'EventController@allevents')->name('events.all');
-Route::get('/index', 'EventController@index')->name('events.index');
-Route::resource('events', 'EventController');
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/allevents', 'GuestController@index')->name('guest.all');
+Route::get('/event/{event}', 'GuestController@show')->name('guest.show');
+Route::get('/event/{event}/register', 'GuestController@register')->name('guest.register');
+Route::post('/event/{event}', 'GuestController@store')->name('guest.store');
+// Route::get('/index', 'EventController@index')->name('events.index');
+Route::group(['middleware' => ['role:admin']], function () {
+    Route::resource('events', 'EventController');
+});
+
 
 
 Auth::routes();
