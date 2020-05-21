@@ -36,8 +36,8 @@
                 <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
                     <p style="color: white"><b>{{ $event->event_title }}</b></p>
                     <p style="color: white">{{ $event->event_desc }}</p>
-                    <a href="{{ url('events') }}"> <button type="button"
-                            class="btn btn-white"> Register</button></a>
+                    <a href="{{ route('guest.show',['event'=>$event->id]) }}"> <button type="button"
+                        class="btn btn-white">Details</button></a>
                 </div>
             </div>
             <div style="margin-top: 22px;"></div>

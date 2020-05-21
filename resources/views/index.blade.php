@@ -44,7 +44,7 @@
                         <!-- {{ $event->id }} -->
                         <div class="content p-20 col-sm-6 ">
 
-                                <a href="{{ route('events.show',['event'=>$event->id]) }}" data-lightbox="image-4"><img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle "></a>
+                                <a href="{{ route('guest.show',['event'=>$event->id]) }}" data-lightbox="image-4"><img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle "></a>
 
 
                           <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
@@ -53,7 +53,7 @@
                             <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
                                 <p style="color: white"><b>{{ $event->event_title }}</b></p>
                                 <p style="color: white">{{ $event->event_desc }}</p>
-                                <a href="{{ route('event.show',['event'=>$event->id]) }}"> <button type="button"
+                                <a href="{{ route('guest.show',['event'=>$event->id]) }}"> <button type="button"
                                         class="btn btn-white">Details</button></a>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
 @if($event->id > 0)
 
     <div class="primary-button">
-        <a href="{{ route('events.all') }}">More Events</a>
+        <a href="{{ route('guest.all') }}">More Events</a>
     </div>
 
 @else
