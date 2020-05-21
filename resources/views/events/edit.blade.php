@@ -55,7 +55,7 @@
                         @method('put')
                         <fieldset>
                         <!-- Form Name -->
-                        <legend><h3>Add Event</h3></legend>
+                        <legend><h3>Edit Event</h3></legend>
 
                         <!-- Text input-->
                         <div class="form-group">
@@ -70,7 +70,7 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="textarea">Description</label>
                           <div class="col-md-4">
-                            <textarea class="form-control" id="description" name="description" rows="5">{{ $event->event_desc }}"</textarea>
+                            <textarea class="form-control" id="description" name="description" rows="5">{{ $event->event_desc }}</textarea>
                           </div>
                         </div>
 
@@ -99,7 +99,7 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="textinput">Presenter Designation</label>
                           <div class="col-md-4">
-                          <input id="presenter_designation" name="presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
+                          <input id="presenter_designation" value="{{ $event->event_presenter_designation }}" name="presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
                           {{-- <span class="help-block">help</span> --}}
                           </div>
                         </div>
@@ -108,18 +108,18 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="textarea">Presenter Org Details</label>
                           <div class="col-md-4">
-                            <textarea class="form-control" id="presenter_org_details" name="presenter_org_details"></textarea>
+                            <textarea class="form-control" id="presenter_org_details"  name="presenter_org_details">{{ $event->event_presenter_org_details }}</textarea>
                           </div>
                         </div>
 
 
-                        <div class="form-group">
+                     <!--   <div class="form-group">
                             <label class="col-md-4 control-label" for="textinput">Presenter Designation</label>
                             <div class="col-md-4">
-                            <input id="presenter_designation" name="presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
+                            <input id="presenter_designation"  value="{{ $event->presenter_designation }}" name="presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
                             {{-- <span class="help-block">help</span> --}}
                             </div>
-                          </div>
+                          </div>-->
 
                           <div class="form-group">
                             <label class="col-md-4 control-label" for="textinput">Event Date</label>
@@ -141,7 +141,7 @@
                           <div class="form-group">
                             <label class="col-md-4 control-label" for="textinput">Event Duration</label>
                             <div class="col-md-4">
-                            <input id="event_duration" name="event_duration" type="text" placeholder="Event Duration" class="form-control input-md">
+                            <input id="event_duration" name="event_duration"  value="{{ $event->event_duration }}" type="text" placeholder="Event Duration" class="form-control input-md">
                             {{-- <span class="help-block">help</span> --}}
                             </div>
                           </div>
@@ -149,7 +149,7 @@
                           <div class="form-group">
                             <label class="col-md-4 control-label" for="textinput">Event Meeting Link</label>
                             <div class="col-md-4">
-                            <input id="event_meeting_link" name="event_meeting_link" type="text" placeholder="Event Meeting Link" class="form-control input-md">
+                            <input id="event_meeting_link" name="event_meeting_link" value="{{ $event->event_meeting_link }}" type="text" placeholder="Event Meeting Link" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
                           </div>
@@ -157,7 +157,7 @@
                           <div class="form-group">
                             <label class="col-md-4 control-label" for="textinput">Event Meeting Id</label>
                             <div class="col-md-4">
-                            <input id="event_meeting_id" name="event_meeting_id" type="text" placeholder="Event Meeting Id" class="form-control input-md">
+                            <input id="event_meeting_id" name="event_meeting_id" value="{{ $event->event_meeting_id }}" type="text" placeholder="Event Meeting Id" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
                           </div>
@@ -165,7 +165,7 @@
                           <div class="form-group">
                             <label class="col-md-4 control-label" for="textinput">Event Meeting Password</label>
                             <div class="col-md-4">
-                            <input id="event_meeting_password" name="event_meeting_password" type="text" placeholder="Event Meeting Password" class="form-control input-md">
+                            <input id="event_meeting_password" name="event_meeting_password" value="{{ $event->event_meeting_password }}" type="text" placeholder="Event Meeting Password" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
                           </div>
@@ -187,8 +187,8 @@
                           <label class="col-md-4 control-label" for="selectbasic">Category</label>
                           <div class="col-md-4">
                             <select id="category" name="category" class="form-control">
-                              <option value="1">Category one</option>
-                              <option value="2">Category two</option>
+                              <option value="1" {{ $event->event_category===1 ? 'selected' :'' }}>Category one</option>
+                              <option value="2" {{ $event->event_category===2 ? 'selected' :'' }}>Category two</option>
                             </select>
                           </div>
                         </div>
