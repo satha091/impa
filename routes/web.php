@@ -34,6 +34,7 @@ Route::get('/event/{event}/register', 'GuestController@register')->name('guest.r
 Route::post('/event/{event}', 'GuestController@store')->name('guest.store');
 // Route::get('/index', 'EventController@index')->name('events.index');
 Route::group(['middleware' => ['role:admin']], function () {
+
     Route::resource('events', 'EventController');
 });
 

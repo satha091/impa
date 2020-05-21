@@ -49,7 +49,7 @@
                     {{-- <form method="POST" action="{{ route('register') }}"> --}}
 
                     {{-- @csrf --}}
-                    <form class="form-horizontal" method="POST" action="{{route('events.store')}}" enctype="multipart/form-data">
+                    <form class="form-horizontal" method="POST" action="{{ route('events.store') }}" enctype="multipart/form-data">
                         @csrf
                         <fieldset>
 
