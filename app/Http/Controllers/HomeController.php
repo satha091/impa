@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Events;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
+
 class HomeController extends Controller
 {
     /**
@@ -27,6 +30,7 @@ class HomeController extends Controller
         return view('home');
     }
     public function home(){
+
         $events= Events::latest()->take(2)->get();
 
         return view('index',['events'=>$events]);

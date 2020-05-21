@@ -17,13 +17,13 @@ class EventController extends Controller
 
     public function __construct()
     {
-       // $this->middleware('auth');
+        $this->middleware('auth');
     }
-    public function allevents()
-    {
-        $events = Events::all();
-        return view('events.allevent', ['events' => $events]);
-    }
+    // public function allevents()
+    // {
+    //     $events = Events::all();
+    //     return view('events.allevent', ['events' => $events]);
+    // }
     public function index()
     {
         $events = Events::all();
@@ -37,6 +37,7 @@ class EventController extends Controller
      */
     public function create()
     {
+
         //
         return view('events.create');
     }
@@ -158,7 +159,8 @@ class EventController extends Controller
         // redirect
         Session::flash('message', 'Successfully deleted the event!');
        // return redirect(route('events.index'));
-        return redirect()->route('events.index');
+       return back()
+       ->with('success', 'You have successfully Deleted event');
         //
     }
 }

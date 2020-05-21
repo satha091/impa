@@ -40,23 +40,23 @@
                         </div>-->
 
                         @foreach($events as $event)
-                        {{ $event->id }}
+
                         <div class="content p-20 col-sm-6 h-75">
-                            <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>
+                            <a href="{{ route('event.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>
                             <h4>{{ $event->event_presenter_name }}</h4>
                             <br><br>
                             <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
                                 <p style="color: white"><b>{{ $event->event_title }}</b></p>
                                 <p style="color: white">{{ $event->event_desc }}</p>
-                                <a href="{{ url('events') }}"> <button type="button"
-                                        class="btn btn-white"> Register</button></a>
+                                <a href="{{ route('event.show',['event'=>$event->id]) }}"> <button type="button"
+                                        class="btn btn-white">Details</button></a>
                             </div>
                         </div>
                          @endforeach
 
 
                         <div class="primary-button">
-                            <a href="{{ route('events.all') }}">More Events</a>
+                            <a href="{{ route('guest.all') }}">More Events</a>
                         </div>
                         <div style="margin-top: 22px;"></div>
                     </div>
