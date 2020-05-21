@@ -44,7 +44,7 @@
                         <!-- {{ $event->id }} -->
                         <div class="content p-20 col-sm-6 ">
 
-                                <a href="{{ route('events.show',['event'=>$event->id]) }}" data-lightbox="image-4"><img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle "></a>
+                                <a href="{{ route('events.show',['event'=>$event->id]) }}" data-lightbox="image-4"><img src="{{ 'images/'.$event->event_image }}"  height="300px" width="70%"></a>
 
 
                           <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
