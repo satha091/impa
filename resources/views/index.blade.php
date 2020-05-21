@@ -10,7 +10,7 @@
 @section('page-content')
 <style>
     .content {
-        margin-top: -90px;
+        margin-top: -70px;
     }
 
 </style>
@@ -26,6 +26,7 @@
         <div class="cd-full-width first-slide">
             <div class="container">
                 <div class="row" style="width: 100%">
+                    <div class="">
                     <div class="col-md-12">
                     <!--    <div class="content col-sm-6">
                             <a href="{{ url('events') }}"> <img src="img/Arunachalam.png"></a>
@@ -40,9 +41,13 @@
                         </div>-->
 
                         @foreach($events as $event)
-                        {{ $event->id }}
-                        <div class="content p-20 col-sm-6 h-75">
-                            <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>
+                        <!-- {{ $event->id }} -->
+                        <div class="content p-20 col-sm-6 ">
+
+                                <a href="{{ route('events.show',['event'=>$event->id]) }}" data-lightbox="image-4"><img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle "></a>
+
+
+                          <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
                             <h4>{{ $event->event_presenter_name }}</h4>
                             <br><br>
                             <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
@@ -54,11 +59,21 @@
                         </div>
                          @endforeach
 
+@if($event->id > 0)
 
-                        <div class="primary-button">
-                            <a href="{{ route('events.all') }}">More Events</a>
-                        </div>
+    <div class="primary-button">
+        <a href="{{ route('events.all') }}">More Events</a>
+    </div>
+
+@else
+    <div class="primary-button">
+        <a href="#">No Events Available</a>
+    </div>
+
+
+                        @endif
                         <div style="margin-top: 22px;"></div>
+                    </div>
                     </div>
                 </div>
             </div>
