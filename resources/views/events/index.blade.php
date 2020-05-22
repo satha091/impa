@@ -19,7 +19,12 @@
     </style>
 
 <div class="container">
+
+
     <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <div style="margin-bottom: 20px">
+            <a href="{{ route('events.create') }}"><button class="btn btn-primary"> Add New</button></a>
+        </div>
         <thead>
             <tr>
                 <th>S.No</th>
@@ -29,7 +34,7 @@
                 <th>Event Presenter Designation</th>
                 <th>Organization Details</th>
                 <th>Event Date</th>
-                <th>ADD </th>
+             <!--   <th>ADD </th>-->
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -45,7 +50,7 @@
                     <td>{{  $event->event_presenter_designation }}</td>
                     <td>{{  $event->event_presenter_org_details }}</td>
                     <td>{{  $event->event_date }}</td>
-                    <td><a href="{{ route('events.create') }}"> ADD</a></td>
+                   <!-- <td><a href="{{ route('events.create') }}"> ADD</a></td>-->
                   <!--  <td><a href="{{ route('events.show',['event'=>$event->id])  }}"> Show</a></td>-->
                     <td><a href="{{ route('events.edit',['event'=>$event->id])  }}"> Edit</a></td>
                     <td>
