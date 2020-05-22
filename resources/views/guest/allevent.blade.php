@@ -39,7 +39,7 @@
                           <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
                             <h4>{{ $event->event_presenter_name }}</h4>
                             <br><br>
-                            <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
+                            <div class="col-md-10  col-xs-offset-1" style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
                                 <p style="color: white"><b>{{ $event->event_title }}</b></p>
                                 <p style="color: white">{{ $event->event_desc }}</p>
                                 <a href="{{ route('guest.show',['event'=>$event->id]) }}"> <button type="button"

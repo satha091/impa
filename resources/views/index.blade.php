@@ -19,7 +19,7 @@
     <li class="selected">
         <div class="heading">
             <h1>Welcome to IMPA</h1>
-            <span>Welcome to Web Design Agency</span>
+
 
         </div>
 
@@ -50,7 +50,7 @@
                           <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
                             <h4>{{ $event->event_presenter_name }}</h4>
                             <br><br>
-                            <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
+                            <div class="col-md-10  col-xs-offset-1"style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
                                 <p style="color: white"><b>{{ $event->event_title }}</b></p>
                                 <p style="color: white">{{ $event->event_desc }}</p>
                                 <a href="{{ route('guest.show',['event'=>$event->id]) }}"> <button type="button"
@@ -59,7 +59,10 @@
                         </div>
                          @endforeach
 
-@if($event->id > 0)
+
+
+                    </div>
+                    @if($event->id > 0)
 
     <div class="primary-button">
         <a href="{{ route('guest.all') }}">More Events</a>
@@ -72,8 +75,7 @@
 
 
                         @endif
-                        <div style="margin-top: 22px;"></div>
-                    </div>
+                        <div style="margin-top: 70px;"></div>
                     </div>
                 </div>
             </div>
