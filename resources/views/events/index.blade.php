@@ -34,7 +34,7 @@
                 <th>Event Presenter Designation</th>
                 <th>Organization Details</th>
                 <th>Event Date</th>
-             <!--   <th>ADD </th>-->
+         <th>Show </th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -51,7 +51,7 @@
                     <td>{{  $event->event_presenter_org_details }}</td>
                     <td>{{  $event->event_date }}</td>
                    <!-- <td><a href="{{ route('events.create') }}"> ADD</a></td>-->
-                  <!--  <td><a href="{{ route('events.show',['event'=>$event->id])  }}"> Show</a></td>-->
+                 <td><a href="{{ route('events.show',['event'=>$event->id])  }}"> Show</a></td>
                     <td><a href="{{ route('events.edit',['event'=>$event->id])  }}"> Edit</a></td>
                     <td>
                     <form action="{{ route('events.destroy',['event'=>$event->id]) }}" method="post">
