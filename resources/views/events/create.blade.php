@@ -10,6 +10,11 @@
 @endsection
 
 @section('page-content')
+<style>
+.overlay{
+    height: 800px;
+}
+    </style>
 <div class="container" style="background-color:#fff;">
 
     {{-- <div class="alert alert-success" id="success-alert">
@@ -40,8 +45,8 @@
       @endif
 
     <div class="row justify-content-center">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
+       
+        <div class="col-md-12">
             <div class="card">
                 {{-- <div class="card-header" style="text-align: left;margin-bottom:25px;"><h3>Sign Up</h3></div> --}}
 
@@ -54,142 +59,187 @@
                         <fieldset>
 
                         <!-- Form Name -->
-                        <legend><h3>Add Event</h3></legend>
+                        <legend><h3 class="col-md-offset-5">Add Event</h3></legend>
 
                         <!-- Text input-->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="title">Title</label>
-                          <div class="col-md-4">
+                        <div class="form-group col-md-4 ">
+                            <div>
+                          <p class="col-md-offset-3 font-weight-bold text-muted" for="title">Title</p>
+                          <div class="col-md-offset-3">
                           <input id="title" name="title" type="text" placeholder="Title" class="form-control input-md" required>
 
                           </div>
+                            </div>
                         </div>
 
+
+
+                       
+
+
+
                         <!-- Textarea -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="textarea">Description</label>
-                          <div class="col-md-4">
-                            <textarea class="form-control" id="description" name="description" rows="5"></textarea>
+                        <div class="form-group col-md-4">
+                            <div>
+                          <p class="col-md-offset-3 font-weight-bold text-muted" for="textarea">Description</p>
+                          <div class="col-md-offset-3">
+                            <textarea class="form-control" id="description" name="description" rows="1"></textarea>
                           </div>
+                            </div>
                         </div>
 
                        <!-- Text input-->
-                       <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Presenter name</label>
-                        <div class="col-md-4">
+                       <div class="form-group col-md-4 ">
+                           <div>
+                        <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Presenter name</p>
+                        <div class="col-md-offset-3">
                         <input id="presenter_name" name="presenter_name" type="text" pattern="^[a-zA-Z\s\.]+$" title="Name should only contain upper case and lower case letters,dot,space. e.g. P John, P.John" placeholder="Presenter name" class="form-control input-md" required>
                         </div>
+                           </div>
                       </div>
 
 
 
                         <!-- Text input-->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="textinput">Image</label>
-                          <img id="imageshow" style="margin-bottom:15px;"/>
+                        <div class="form-group col-md-4">
+                            <div>
+                          <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Image</p>
+                          <img id="imageshow" />
 
-                          <div class="col-md-4">
+                          <div class="col-md-offset-3">
                           <input id="image" name="image" type="file" placeholder="Image" class="form-control input-md">
 
                           </div>
+                            </div>
                         </div>
 
                         <!-- Text input-->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="textinput">Presenter Designation</label>
-                          <div class="col-md-4">
+                        <div class="form-group col-md-4">
+                            <div>
+                          <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Presenter Designation</p>
+                          <div class="col-md-offset-3">
                           <input id="presenter_designation" name="presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
                           {{-- <span class="help-block">help</span> --}}
                           </div>
+                            </div>
                         </div>
 
+
+                     
                         <!-- Textarea -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="textarea">Presenter Org Details</label>
-                          <div class="col-md-4">
-                            <textarea class="form-control" id="presenter_org_details" name="presenter_org_details"></textarea>
+                        <div class="form-group col-md-4">
+                            <div>
+                          <p class="col-md-offset-3 font-weight-bold text-muted" for="textarea">Presenter Org Details</p>
+                          <div class="col-md-offset-3">
+                            <textarea class="form-control" id="presenter_org_details" name="presenter_org_details" rows="1"></textarea>
                           </div>
+                            </div>
                         </div>
 
 
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Presenter Designation</label>
-                            <div class="col-md-4">
+                        <div class="form-group col-md-4">
+                            <div>
+                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Presenter Designation</p>
+                            <div class="col-md-offset-3">
                             <input id="presenter_designation" name="presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
                             {{-- <span class="help-block">help</span> --}}
                             </div>
+                            </div>
                           </div>
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Date</label>
-                            <div class="col-md-4">
+                          
+                       
+
+                          <div class="form-group col-md-4">
+                              <div>
+                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Date</p>
+                            <div class="col-md-offset-3">
                             <input id="event_date" name="event_date" type="date" placeholder="Event Date" class="form-control input-md" required>
                             {{-- <span class="help-block">help</span> --}}
                             </div>
+                            </div>
                           </div>
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Time</label>
-                            <div class="col-md-4">
+                          <div class="form-group col-md-4">
+                              <div>
+                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Time</p>
+                            <div class="col-md-offset-3">
                             <input id="event_time" name="event_time" type="time" placeholder="Event Time" class="form-control input-md">
 
                             </div>
+                              </div>
                           </div>
 
+                         
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Duration</label>
-                            <div class="col-md-4">
+                          <div class="form-group col-md-4">
+                              <div>
+                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Duration</p>
+                            <div class="col-md-offset-3">
                             <input id="event_duration" name="event_duration" type="text" placeholder="Event Duration" class="form-control input-md">
                             {{-- <span class="help-block">help</span> --}}
                             </div>
+                              </div>
                           </div>
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Meeting Link</label>
-                            <div class="col-md-4">
+                          <div class="form-group col-md-4">
+                              <div>
+                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Meeting Link</p>
+                            <div class="col-md-offset-3">
                             <input id="event_meeting_link" name="event_meeting_link" type="text" placeholder="Event Meeting Link" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
+                              </div>
                           </div>
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Meeting Id</label>
-                            <div class="col-md-4">
+                        
+
+                          <div class="form-group  col-md-4">
+                              <div>
+                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Meeting Id</p>
+                            <div class="col-md-offset-3">
                             <input id="event_meeting_id" name="event_meeting_id" type="text" placeholder="Event Meeting Id" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Meeting Password</label>
-                            <div class="col-md-4">
-                            <input id="event_meeting_password" name="event_meeting_password" type="text" placeholder="Event Meeting Password" class="form-control input-md">
-                            {{-- {-- <span class="help-block">help</span> --}}
                             </div>
                           </div>
 
+                          <div class="form-group  col-md-4">
+                              <div>
+                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Meeting Password</p>
+                            <div class="col-md-offset-3">
+                            <input id="event_meeting_password" name="event_meeting_password" type="text" placeholder="Event Meeting Password" class="form-control input-md">
+                            {{-- {-- <span class="help-block">help</span> --}}
+                            </div>
+                            </div>
+                          </div>
+
+                         
 
                         <!-- Select Basic -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="selectbasic">Status</label>
-                          <div class="col-md-4">
+                        <div class="form-group col-md-4">
+                            <div>
+                          <p class="col-md-offset-3 font-weight-bold text-muted" for="selectbasic">Status</p>
+                          <div class="col-md-offset-3">
                             <select id="status" name="status" class="form-control">
                               <option value="1">Active</option>
                               <option value="2">Inactive</option>
                             </select>
                           </div>
+                            </div>
                         </div>
 
                         <!-- Select Basic -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="selectbasic">Category</label>
-                          <div class="col-md-4">
+                        <div class="form-group col-md-4">
+                            <div>
+                          <p class="col-md-offset-3 font-weight-bold text-muted" for="selectbasic">Category</p>
+                          <div class="col-md-offset-3">
                             <select id="category" name="category" class="form-control">
                               <option value="1">Category one</option>
                               <option value="2">Category two</option>
                             </select>
                           </div>
+                            </div>
                         </div>
 
 
@@ -217,9 +267,10 @@
                             </div>
                           </div>
                         </div> --}}
-                        <div class="form-group">
+                        <div style="margin-bottom: 24px"></div>
+                        <div class="form-group col-md-5 ">
                             <label class="col-md-4 control-label" for="textinput"></label>
-                            <div class="col-md-3">
+                            <div class="col-md-6 col-md-offset-12">
                             <input  name="submit" type="submit" class="form-control input-md btn btn-warning">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
@@ -228,13 +279,13 @@
 
                         </fieldset>
                         </form>
-                        <div style="margin-bottom: 44px"></div>
+                        <div style="margin-bottom: 24px"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-1"></div>
+      
 
     </div>
     </div>

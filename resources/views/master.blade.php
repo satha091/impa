@@ -12,6 +12,14 @@
         <link rel = "icon" href =
 "{{ url('img/logo.png') }}"
         type = "image/x-icon">
+        <style>
+.img{
+    max-width: 100%;
+    height: 100px;
+}
+
+
+            </style>
 <!--
 Newline Template
 https://templatemo.com/tm-503-newline
@@ -44,29 +52,41 @@ https://templatemo.com/tm-503-newline
         <section class="cd-hero">
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
-                  <div class="navbar-header">
+                  <div class="navbar-header ">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a href="#"> <img src="{{ url('img/logo.png') }}"></a>
+                   <!-- <a href="#"> <img src="{{ url('img/logo.png') }}"></a>-->
                     <!--<h3 class="navbar-brand" style="margin-top: 3px;">IMPA Events</h3>-->
                    <!-- <a class="navbar-brand offset-11" href="#">IMPA Events</a>-->
                   </div>
-                  <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav ">
+                  <div class="collapse navbar-collapse " id="myNavbar">
+                    <ul class="nav navbar-nav col-md-4">
                         <li class="selected p-5"><a href="{{ url('/') }}"><div class=""></div><h5>Home</h5></a></li>
                        <!-- <li class=""><a href="{{ url('about') }}"><div class=""></div><h5>About Us</h5></a></li>
                         <li><a href="#0"><div class=""></div><h6>Featured</h6></a></li>
                         <li><a href="{{ url('project') }}"><div class=""></div><h5>Projects</h5></a></li>
                         <li ><a href="{{ url('contact') }}"><div class=""></div><h5>Contact Us</h5></a></li>-->
                     </ul>
+
+                    <ul class="nav navbar-nav col-md-4">
+                        <li class="selected p-5"> <a  href="#"> <img class="img" src="{{ url('img/logo.png') }}" ></a></li>
+                        <a href="{{ url('/') }}"><h5 style="color: white;margin-top:30px">WELCOME TO IMPA</h5></a>
+                       <li><a href="{{ url('events') }}"><span class="glyphicon glyphicon-user"></span> Events</a></li>
+                       
+                       <!-- <li class=""><a href="{{ url('about') }}"><div class=""></div><h5>About Us</h5></a></li>
+                        <li><a href="#0"><div class=""></div><h6>Featured</h6></a></li>
+                        <li><a href="{{ url('project') }}"><div class=""></div><h5>Projects</h5></a></li>
+                        <li ><a href="{{ url('contact') }}"><div class=""></div><h5>Contact Us</h5></a></li>-->
+                    </ul>
+
                     @if (Route::has('login'))
-                    <ul class="nav navbar-nav navbar-right" style="margin-right:50px;">
+                    <ul class="nav navbar-nav navbar-right " style="margin-right:50px;">
                       @auth
 
-                      <li><a href="{{ url('events') }}"><span class="glyphicon glyphicon-user"></span> Events</a></li>
+                     <!-- <li><a href="{{ url('events') }}"><span class="glyphicon glyphicon-user"></span> Events</a></li>-->
                       <li class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                               {{ Auth::user()->name }} <span class="caret"></span>

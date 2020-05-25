@@ -18,7 +18,7 @@
 
     <li class="selected">
         <div class="heading">
-            <h1>Welcome to IMPA</h1>
+           <!-- <h1>Welcome to IMPA</h1>-->
 
 
         </div>
