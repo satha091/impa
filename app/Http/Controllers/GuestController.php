@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Events;
+use App\Mail\EventRegistred;
+use App\Mail\RegistraionMail;
 use App\Participants;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class GuestController extends Controller
 {
@@ -39,7 +42,9 @@ class GuestController extends Controller
      */
     public function store(Request $request,Participants $participants,$id)
     {
-        $participants->create($request->all());
+        $event =Events::find($id);
+         $participants->create($request->all());
+         Mail::to($request->user_email)->send(new EventRegistred($event));
         return back()
             ->with('success', 'You have successfully created event');
     }
