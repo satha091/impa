@@ -10,7 +10,7 @@
 
         <title>IMPA</title>
         <link rel = "icon" href =
-"img/logo.png"
+    {{ url('img/logo.png') }}
         type = "image/x-icon">
 <!--
 Newline Template
@@ -27,7 +27,7 @@ https://templatemo.com/tm-503-newline
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css">
        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.bootstrap.min.css">
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="{{ url('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
     </head>
     <body>
 
@@ -200,8 +200,8 @@ https://templatemo.com/tm-503-newline
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>');</script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
+        <script src="{{ url('js/vendor/bootstrap.min.js') }}"></script>
+        <script src="{{ url('js/plugins.js') }}"></script>
 
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
