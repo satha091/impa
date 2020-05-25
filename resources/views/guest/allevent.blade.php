@@ -39,7 +39,7 @@
                           <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
                             <h4>{{ $event->event_presenter_name }}</h4>
                             <br><br>
-                            <div class="col-md-10  col-xs-offset-1" style="background-color:#FFBF00;">
+                            <div class="col-md-10  col-xs-offset-1" style="background-color:#FFBF00;min-height: 200px">
                                 <p style="color: white"><b>{{ $event->event_title }}</b></p>
                                 <p style="color: white">{{ str_limit(strip_tags($event->event_desc), 120) }}</p>
                                 {{-- <a href="{{ route('guest.show',['event'=>$event->id]) }}"> <button type="button"
