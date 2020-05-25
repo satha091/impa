@@ -50,7 +50,7 @@ https://templatemo.com/tm-503-newline
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a href="#"> <img src="img/logo.png"></a>
+                    <a href="#"> <img src="{{ url('img/logo.png') }}"></a>
                     <!--<h3 class="navbar-brand" style="margin-top: 3px;">IMPA Events</h3>-->
                    <!-- <a class="navbar-brand offset-11" href="#">IMPA Events</a>-->
                   </div>
