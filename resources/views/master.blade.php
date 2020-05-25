@@ -10,7 +10,7 @@
 
         <title>IMPA</title>
         <link rel = "icon" href =
-    {{ url('img/logo.png') }}
+"{{ url('img/logo.png') }}"
         type = "image/x-icon">
 <!--
 Newline Template
