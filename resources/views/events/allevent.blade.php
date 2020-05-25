@@ -30,7 +30,7 @@
             @foreach($events as $event)
             {{ $event->id }}
             <div class="content p-20 col-sm-6 h-75">
-                <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>
+                <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ url('images/'.$event->event_image) }}" class="img-responsive rounded-circle " ></a>
                 <h4>{{ $event->event_presenter_name }}</h4>
                 <br><br>
                 <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">

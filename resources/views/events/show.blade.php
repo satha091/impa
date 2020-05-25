@@ -33,7 +33,7 @@
 
                         <div class="content card col-sm-6 col-sm-offset-3" style="background-color:#FFBF00;">
                             <div class="card-body shadow" style="background-color:#ffff;box-shadow: 10px 10px 10px 10px ; ">
-                                <img src="{{ 'images/'.$event->event_image }}" class="" width="300px" height="300px">
+                                <img src="{{ url('images/'.$event->event_image) }}" class="" width="300px" height="300px">
                                 <h4>{{ $event->event_title }}</h4>
                                                    </div>
 

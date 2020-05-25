@@ -1,10 +1,10 @@
 @extends('master')
 
 @section('bootstrap')
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="css/fontAwesome.css">
-<link rel="stylesheet" href="css/templatemo-style.css">
+<link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url('css/bootstrap-theme.min.css') }}">
+<link rel="stylesheet" href="{{ url('css/fontAwesome.css') }}">
+<link rel="stylesheet" href="{{ url('css/templatemo-style.css') }}">
 @endsection
 
 @section('page-content')
@@ -34,22 +34,22 @@
                         <!-- {{ $event->id }} -->
                         <div class="content p-20 col-sm-6 ">
 
-                                <a href="{{ route('guest.show',['event'=>$event->id]) }}" data-lightbox="image-4"><img src="{{ 'images/'.$event->event_image }}" class="" width="300px" height="300px"></a>
+                                <a href="{{ route('guest.show',['event'=>$event->id]) }}" data-lightbox="image-4"><img src="{{ url('images/'.$event->event_image) }}" class="" style="height: 300px; width: auto"></a>
 
                           <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
                             <h4>{{ $event->event_presenter_name }}</h4>
                             <br><br>
-                            <div class="col-md-10  col-xs-offset-1" style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
+                            <div class="col-md-10  col-xs-offset-1" style="background-color:#FFBF00;">
                                 <p style="color: white"><b>{{ $event->event_title }}</b></p>
                                 <p style="color: white">{{ $event->event_desc }}</p>
-                                <a href="{{ route('guest.show',['event'=>$event->id]) }}"> <button type="button"
-                                    class="btn btn-white">Details</button></a>
+                                {{-- <a href="{{ route('guest.show',['event'=>$event->id]) }}"> <button type="button"
+                                    class="btn btn-white">Details</button></a> --}}
                             </div>
                         </div>
                          @endforeach
 
 
-                        <div style="margin-top: 22px;"></div>
+                        <div style="margin-top: 10px;"></div>
                     </div>
                     </div>
                 </div>
