@@ -56,7 +56,7 @@
                                     <div class="col-md-10  col-xs-offset-1"
                                         style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px ;min-height: 200px">
                                         <p style="color: white"><b>{{ $event->event_title }}</b></p>
-                                        <p style="color: white">{{ $event->event_desc }}</p>
+                                        <p style="color: white">{{ str_limit(strip_tags($event->event_desc), 120) }}</p>
                                         {{-- <a
                                             href="{{ route('guest.show',['event'=>$event->id]) }}">
                                             <button type="button" class="btn btn-white">Details</button></a> --}}
