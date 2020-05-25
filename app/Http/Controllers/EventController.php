@@ -66,13 +66,9 @@ class EventController extends Controller
         $event->event_presenter_name = $request->get('presenter_name');
 
         if ($request->hasFile('image')) {
-
-
             // $event->event_image = $request->get('image');
             $imagename = time() . '.' . $request->image->getClientOriginalExtension();
-
             $event->event_image = $imagename;
-
             $request->image->move(public_path('images'), $imagename);
         }
 
@@ -146,6 +142,11 @@ class EventController extends Controller
             $event->event_title=$request->event_title;
             $event->event_desc=$request->event_desc;
             $event->event_presenter_name=$request->event_presenter_name;
+            if ($request->hasFile('event_image')) {
+                $imagename = time() . '.' . $request->event_image->getClientOriginalExtension();
+                $event->event_image = $imagename;
+                $request->event_image->move(public_path('images'), $imagename);
+            }
             // $event->event_image=$request->event_image;
             $event->event_presenter_designation=$request->event_presenter_designation;
             $event->event_presenter_org_details=$request->event_presenter_org_details;
