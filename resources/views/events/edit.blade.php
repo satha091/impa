@@ -25,7 +25,7 @@
             <div class="alert alert-success alert-dismissible" id="mes" style="margin-top:20px;">
 
             <button type="button" class="close" data-dismiss="alert" onclick="javascript:document.getElementById('mes').style.display = 'none';">x</button>
-            <strong>You have successfully created event</strong>
+            <strong>{{ session('success') }}</strong>
             </div>
         @endif
         @if (count($errors) > 0)
@@ -61,7 +61,7 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="title">Title</label>
                           <div class="col-md-4">
-                          <input id="title" name="title" value="{{ $event->event_title }}" type="text" placeholder="Title" class="form-control input-md" required>
+                          <input id="title" name="event_title" value="{{ $event->event_title }}" type="text" placeholder="Title" class="form-control input-md" required>
 
                           </div>
                         </div>
@@ -70,7 +70,7 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="textarea">Description</label>
                           <div class="col-md-4">
-                            <textarea class="form-control" id="description" name="description" rows="5">{{ $event->event_desc }}</textarea>
+                            <textarea class="form-control" id="description" name="event_desc" rows="5">{{ $event->event_desc }}</textarea>
                           </div>
                         </div>
 
@@ -78,7 +78,7 @@
                        <div class="form-group">
                         <label class="col-md-4 control-label" for="textinput">Presenter name</label>
                         <div class="col-md-4">
-                        <input id="presenter_name" name="presenter_name" type="text" value="{{ $event->event_presenter_name }}" pattern="^[a-zA-Z\s\.]+$" title="Name should only contain upper case and lower case letters,dot,space. e.g. P John, P.John" placeholder="Presenter name" class="form-control input-md" required>
+                        <input id="presenter_name" name="event_presenter_name" type="text" value="{{ $event->event_presenter_name }}" pattern="^[a-zA-Z\s\.]+$" title="Name should only contain upper case and lower case letters,dot,space. e.g. P John, P.John" placeholder="Presenter name" class="form-control input-md" required>
                         </div>
                       </div>
 
@@ -90,7 +90,7 @@
                           <img id="imageshow" style="margin-bottom:15px;"/>
 
                           <div class="col-md-4">
-                          <input id="image" name="image" type="file" placeholder="Image" class="form-control input-md" required>
+                          <input id="image" name="event_image" type="file" placeholder="Image" class="form-control input-md" required>
 
                           </div>
                         </div>
@@ -99,7 +99,7 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="textinput">Presenter Designation</label>
                           <div class="col-md-4">
-                          <input id="presenter_designation" value="{{ $event->event_presenter_designation }}" name="presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
+                          <input id="presenter_designation" value="{{ $event->event_presenter_designation }}" name="event_presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
                           {{-- <span class="help-block">help</span> --}}
                           </div>
                         </div>
@@ -108,7 +108,7 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="textarea">Presenter Org Details</label>
                           <div class="col-md-4">
-                            <textarea class="form-control" id="presenter_org_details"  name="presenter_org_details">{{ $event->event_presenter_org_details }}</textarea>
+                            <textarea class="form-control" id="presenter_org_details"  name="event_presenter_org_details">{{ $event->event_presenter_org_details }}</textarea>
                           </div>
                         </div>
 
@@ -175,7 +175,7 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="selectbasic">Status</label>
                           <div class="col-md-4">
-                            <select id="status" name="status" class="form-control" required>
+                            <select id="status" name="event_status" class="form-control" required>
                               <option value="1" {{ $event->event_status===1 ? 'selected' :'' }}>Active</option>
                               <option value="2" {{ $event->event_status===2 ? 'selected' :'' }}>Inactive</option>
                             </select>
@@ -186,7 +186,7 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="selectbasic">Category</label>
                           <div class="col-md-4">
-                            <select id="category" name="category" class="form-control">
+                            <select id="event_category" name="event_category" class="form-control">
                               <option value="1" {{ $event->event_category===1 ? 'selected' :'' }}>Category one</option>
                               <option value="2" {{ $event->event_category===2 ? 'selected' :'' }}>Category two</option>
                             </select>
