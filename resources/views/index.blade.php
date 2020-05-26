@@ -12,7 +12,8 @@
     .content {
         margin-top: -70px;
     }
-    .overlay{
+
+    .overlay {
         background-color: white;
     }
 
@@ -21,7 +22,7 @@
 
     <li class="selected">
         <div class="heading">
-           <!-- <h1>Welcome to IMPA</h1>-->
+            <!-- <h1>Welcome to IMPA</h1>-->
 
 
         </div>
@@ -46,45 +47,31 @@
                             @foreach($events as $event)
                                 <!-- {{ $event->id }} -->
                                 <div class="content p-20 col-sm-6 ">
-
-                                    <a href="{{ route('guest.show',['event'=>$event->id]) }}" class=""
-                                        data-lightbox="image-4"><img
+                                    <a href="{{ route('guest.show',['event'=>$event->id]) }}"
+                                        class="" data-lightbox="image-4"><img
                                             src="{{ url('images/'.$event->event_image) }}"
                                             style="width: auto; height:250px"></a>
-
-
                                     <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
                                     <h4>{{ $event->event_presenter_name }}</h4>
                                     <br><br>
                                     <div class="col-md-10  col-xs-offset-1"
-                                        style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px ;min-height: 200px">
+                                        style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px ;min-height: 150px">
                                         <p style="color: white"><b>{{ $event->event_title }}</b></p>
                                         <p style="color: white">{{ $event->event_desc }}</p>
-
-                                        {{-- <a
-                                            href="{{ route('guest.show',['event'=>$event->id]) }}">
-                                            <button type="button" class="btn btn-white">Details</button></a> --}}
-
                                     </div>
                                 </div>
                             @endforeach
-
-
-
+                            @if($event->id > 0)
+                                <div class="primary-button">
+                                    <a href="{{ route('guest.all') }}">More Events</a>
+                                </div>
+                            @else
+                                <div class="primary-button">
+                                    <a href="#">No Events Available</a>
+                                </div>
+                            @endif
                         </div>
-                        @if($event->id > 0)
 
-                            <div class="primary-button">
-                                <a href="{{ route('guest.all') }}">More Events</a>
-                            </div>
-
-                        @else
-                            <div class="primary-button">
-                                <a href="#">No Events Available</a>
-                            </div>
-
-
-                        @endif
                         <div style="margin-top: 70px;"></div>
                     </div>
                 </div>
