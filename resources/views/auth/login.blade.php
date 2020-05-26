@@ -13,7 +13,7 @@
 <style>
 .overlay{
     background-color:white;
-    background-image: url(img/test2.jpg);
+    background-image: url(img/test4.jpg);
     height: 100%;
 
   /* Center and scale the image nicely */
