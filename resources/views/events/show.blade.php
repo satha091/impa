@@ -1,12 +1,12 @@
 @extends('master')
 
 @section('bootstrap')
-<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
 
-<link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css')}}">
-<link rel="stylesheet" href="{{ asset('css/fontAwesome.css')}}">
-<link rel="stylesheet" href="{{ asset('css/templatemo-style.css')}}">
+<link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/fontAwesome.css') }}">
+<link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
 @endsection
 
 @section('page-content')
@@ -17,7 +17,6 @@
     .overlay{
         height: 35%;
     }
-
 
 </style>
 <ul class="cd-hero-slider">
@@ -30,11 +29,11 @@
         </div>
 
 
-            <div class="container">
+        <div class="container">
 
 
 
-                      <!--  <div class="content card col-sm-6 col-sm-offset-3" style="background-color:#FFBF00;">
+            <!--  <div class="content card col-sm-6 col-sm-offset-3" style="background-color:#FFBF00;">
                             <div class="card-body shadow" style="background-color:#ffff;box-shadow: 10px 10px 10px 10px ; ">
                                 <img src="{{ url('images/'.$event->event_image) }}" class="" width="300px" height="300px">
                                 <h4>{{ $event->event_title }}</h4>
@@ -64,20 +63,31 @@
                         <th>Organisation</th>
                         <th>Location</th>
                         <th>Accepted On</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($participants as $participant )
-                    <tr>
-                        <td>{{ $participant->user_name }}</td>
-                        <td>{{ $participant->user_contact }}</td>
-                        <td>{{ $participant->user_email }}</td>
-                        <td>{{ $participant->user_organisation }}</td>
-                        <td>{{ $participant->user_location }}</td>
-                        <td>{{ $participant->accepted_on }}</td>
-                    </tr>
+                    @foreach($participants as $participant )
+                        <tr>
+                            <td>{{ $participant->user_name }}</td>
+                            <td>{{ $participant->user_contact }}</td>
+                            <td>{{ $participant->user_email }}</td>
+                            <td>{{ $participant->user_organisation }}</td>
+                            <td>{{ $participant->user_location }}</td>
+                            <td>{{ $participant->accepted_on }}</td>
+                            <td>
+                                <form
+                                    action="{{ route('participants.destroy',['id'=>$participant->id]) }}"
+                                    method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <input type="submit" value="Delete">
+                                </form>
+                            </td>
 
-                   @endforeach
+                        </tr>
+
+                    @endforeach
 
                 </tbody>
 
@@ -85,9 +95,9 @@
             <div style="margin-top: 150px;"></div>
 
 
-</div>
+        </div>
 
-</li>
+    </li>
 
 
 
