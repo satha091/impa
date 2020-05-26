@@ -10,21 +10,42 @@
 @endsection
 
 @section('page-content')
+<style>
+.overlay{
+    background-color:white;
+    background-image: url(img/test2.jpg);
+    height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  opacity: 0.7;
+}
+
+.card:hover {
+  opacity: 1.0;
+}
+
+    </style>
 <div class="container"  style="padding:10px; line-height:40px;">
     <div class="row justify-content-center">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <div class="card" style="margin-top:0px;">
-                <div class="card-header" style="text-align: center;margin-bottom:25px;"><h3>Login</h3></div>
+            <div class="card" style="background-color:black; padding:20px 20px 20px 20px;">
+                <div class="card-header text-info" style="text-align: center;margin-bottom:25px;"><h3>Login</h3></div>
 
-                <div class="card-body">
+                <div class="card-body" >
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-offset-4 col-form-label text-md-right text-info">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -36,9 +57,9 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-offset-4 col-form-label text-md-right text-info">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
