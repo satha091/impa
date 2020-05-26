@@ -18,7 +18,7 @@ class GuestController extends Controller
      */
     public function index()
     {
-        $events = Events::all();
+        $events = Events::all()->where('event_status',1);
         return view('guest.allevent', ['events' => $events]);
 
     }
