@@ -31,7 +31,7 @@ class HomeController extends Controller
     }
     public function home(){
 
-        $events= Events::latest()->take(2)->get();
+        $events= Events::latest()->where('event_status',1)->take(2)->get();
 
         return view('index',['events'=>$events]);
     }
