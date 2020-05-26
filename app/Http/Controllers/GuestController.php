@@ -30,7 +30,8 @@ class GuestController extends Controller
      */
     public function register($id)
     {
-        return view('guest.register',['event_id'=>$id]);
+        $event_title=Events::find($id)->event_title;
+        return view('guest.register',['event_id'=>$id,'event_title'=>$event_title]);
         //
     }
 
