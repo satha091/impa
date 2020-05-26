@@ -45,7 +45,7 @@
       @endif
 
     <div class="row justify-content-center">
-       
+
         <div class="col-md-12">
             <div class="card">
                 {{-- <div class="card-header" style="text-align: left;margin-bottom:25px;"><h3>Sign Up</h3></div> --}}
@@ -64,7 +64,7 @@
                         <!-- Text input-->
                         <div class="form-group col-md-4 ">
                             <div>
-                          <p class="col-md-offset-3 font-weight-bold text-muted" for="title">Title</p>
+                          <label class="col-md-offset-3 font-weight-bold text-muted" for="title">Title</label>
                           <div class="col-md-offset-3">
                           <input id="title" name="title" type="text" placeholder="Title" class="form-control input-md" required>
 
@@ -74,14 +74,14 @@
 
 
 
-                       
+
 
 
 
                         <!-- Textarea -->
                         <div class="form-group col-md-4">
                             <div>
-                          <p class="col-md-offset-3 font-weight-bold text-muted" for="textarea">Description</p>
+                          <label class="col-md-offset-3 font-weight-bold text-muted" for="textarea">Description</label>
                           <div class="col-md-offset-3">
                             <textarea class="form-control" id="description" name="description" rows="1"></textarea>
                           </div>
@@ -91,7 +91,7 @@
                        <!-- Text input-->
                        <div class="form-group col-md-4 ">
                            <div>
-                        <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Presenter name</p>
+                        <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Presenter name</label>
                         <div class="col-md-offset-3">
                         <input id="presenter_name" name="presenter_name" type="text" pattern="^[a-zA-Z\s\.]+$" title="Name should only contain upper case and lower case letters,dot,space. e.g. P John, P.John" placeholder="Presenter name" class="form-control input-md" required>
                         </div>
@@ -103,7 +103,7 @@
                         <!-- Text input-->
                         <div class="form-group col-md-4">
                             <div>
-                          <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Image</p>
+                          <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Image</label>
                           <img id="imageshow" />
 
                           <div class="col-md-offset-3">
@@ -116,7 +116,7 @@
                         <!-- Text input-->
                         <div class="form-group col-md-4">
                             <div>
-                          <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Presenter Designation</p>
+                          <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Presenter Designation</label>
                           <div class="col-md-offset-3">
                           <input id="presenter_designation" name="presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
                           {{-- <span class="help-block">help</span> --}}
@@ -125,11 +125,11 @@
                         </div>
 
 
-                     
+
                         <!-- Textarea -->
                         <div class="form-group col-md-4">
                             <div>
-                          <p class="col-md-offset-3 font-weight-bold text-muted" for="textarea">Presenter Org Details</p>
+                          <label class="col-md-offset-3 font-weight-bold text-muted" for="textarea">Presenter Org Details</label>
                           <div class="col-md-offset-3">
                             <textarea class="form-control" id="presenter_org_details" name="presenter_org_details" rows="1"></textarea>
                           </div>
@@ -137,7 +137,7 @@
                         </div>
 
 
-                        <div class="form-group col-md-4">
+                       <!-- <div class="form-group col-md-4">
                             <div>
                             <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Presenter Designation</p>
                             <div class="col-md-offset-3">
@@ -145,14 +145,14 @@
                             {{-- <span class="help-block">help</span> --}}
                             </div>
                             </div>
-                          </div>
+                          </div>-->
 
-                          
-                       
+
+
 
                           <div class="form-group col-md-4">
                               <div>
-                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Date</p>
+                            <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Date</label>
                             <div class="col-md-offset-3">
                             <input id="event_date" name="event_date" type="date" placeholder="Event Date" class="form-control input-md" required>
                             {{-- <span class="help-block">help</span> --}}
@@ -162,7 +162,7 @@
 
                           <div class="form-group col-md-4">
                               <div>
-                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Time</p>
+                            <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Time</label>
                             <div class="col-md-offset-3">
                             <input id="event_time" name="event_time" type="time" placeholder="Event Time" class="form-control input-md">
 
@@ -170,11 +170,11 @@
                               </div>
                           </div>
 
-                         
+
 
                           <div class="form-group col-md-4">
                               <div>
-                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Duration</p>
+                            <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Duration</label>
                             <div class="col-md-offset-3">
                             <input id="event_duration" name="event_duration" type="text" placeholder="Event Duration" class="form-control input-md">
                             {{-- <span class="help-block">help</span> --}}
@@ -184,7 +184,7 @@
 
                           <div class="form-group col-md-4">
                               <div>
-                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Meeting Link</p>
+                            <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Meeting Link</label>
                             <div class="col-md-offset-3">
                             <input id="event_meeting_link" name="event_meeting_link" type="text" placeholder="Event Meeting Link" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
@@ -192,11 +192,11 @@
                               </div>
                           </div>
 
-                        
+
 
                           <div class="form-group  col-md-4">
                               <div>
-                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Meeting Id</p>
+                            <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Meeting Id</label>
                             <div class="col-md-offset-3">
                             <input id="event_meeting_id" name="event_meeting_id" type="text" placeholder="Event Meeting Id" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
@@ -206,7 +206,7 @@
 
                           <div class="form-group  col-md-4">
                               <div>
-                            <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Meeting Password</p>
+                            <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Event Meeting Password</label>
                             <div class="col-md-offset-3">
                             <input id="event_meeting_password" name="event_meeting_password" type="text" placeholder="Event Meeting Password" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
@@ -214,12 +214,12 @@
                             </div>
                           </div>
 
-                         
+
 
                         <!-- Select Basic -->
                         <div class="form-group col-md-4">
                             <div>
-                          <p class="col-md-offset-3 font-weight-bold text-muted" for="selectbasic">Status</p>
+                          <label class="col-md-offset-3 font-weight-bold text-muted" for="selectbasic">Status</label>
                           <div class="col-md-offset-3">
                             <select id="status" name="status" class="form-control">
                               <option value="1">Active</option>
@@ -232,7 +232,7 @@
                         <!-- Select Basic -->
                         <div class="form-group col-md-4">
                             <div>
-                          <p class="col-md-offset-3 font-weight-bold text-muted" for="selectbasic">Category</p>
+                          <label class="col-md-offset-3 font-weight-bold text-muted" for="selectbasic">Category</label>
                           <div class="col-md-offset-3">
                             <select id="category" name="category" class="form-control">
                               <option value="1">Category one</option>
@@ -285,7 +285,7 @@
             </div>
         </div>
 
-      
+
 
     </div>
     </div>

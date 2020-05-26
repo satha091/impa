@@ -57,7 +57,7 @@
         <fieldset>
 
             <!-- Form Name -->
-            <legend><h3 class="col-md-offset-4">Add Register</h3></legend>
+            <legend><h3 class="col-md-offset-4">{{ $event_title }} Register</h3></legend>
 
 
 
@@ -69,9 +69,10 @@
                 </div>
               </div>
 
+
               <div class="form-group col-md-6">
                   <div>
-                <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">User name</p>
+                <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">User name</label>
                 <div class="col-md-offset-3">
                 <input id="" name="user_name" type="text" pattern="^[a-zA-Z\s\.]+$" title="Name should only contain upper case and lower case letters,dot,space. e.g. P John, P.John" placeholder="Enter User Name" class="form-control input-md" required>
                 </div>
@@ -80,7 +81,7 @@
 
               <div class="form-group col-md-6">
                   <div>
-                <p class="col-md-offset-3 font-weight-bold text-muted" for="title">User Contact</p>
+                <label class="col-md-offset-3 font-weight-bold text-muted" for="title">User Contact</label>
                 <div class="col-md-offset-3">
                 <input id="" name="user_contact" type="text" placeholder="Pleser Enter Contact Details" class="form-control input-md" required>
 
@@ -89,7 +90,7 @@
               </div>
               <div class="form-group col-md-6">
                   <div>
-                <p class="col-md-offset-3 font-weight-bold text-muted" for="title">E-mail</p>
+                <label class="col-md-offset-3 font-weight-bold text-muted" for="title">E-mail</label>
                 <div class="col-md-offset-3">
                 <input id="" name="user_email" type="text" placeholder="Pleser Enter E-mail" class="form-control input-md" required>
 
@@ -99,7 +100,7 @@
 
               <div class="form-group col-md-6">
                   <div>
-                <p class="col-md-offset-3 font-weight-bold text-muted" for="title">User Organization</p>
+                <label class="col-md-offset-3 font-weight-bold text-muted" for="title">User Organization</label>
                 <div class="col-md-offset-3">
                 <input id="" name="user_organisation" type="text" placeholder="Pleser Enter User Organisation" class="form-control input-md" required>
 
@@ -109,7 +110,7 @@
 
               <div class="form-group col-md-6">
                   <div>
-                <p class="col-md-offset-3 font-weight-bold text-muted" for="title">Location</p>
+                <label class="col-md-offset-3 font-weight-bold text-muted" for="title">Location</label>
                 <div class="col-md-offset-3">
                 <input id="" name="user_location" type="text" placeholder="Pleser Enter Location" class="form-control input-md" required>
 

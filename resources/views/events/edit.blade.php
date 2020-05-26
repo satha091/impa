@@ -58,58 +58,70 @@
                         <legend><h3>Edit Event</h3></legend>
 
                         <!-- Text input-->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="title">Title</label>
-                          <div class="col-md-4">
+                        <div class="form-group col-md-4">
+                            <div>
+                          <p class="col-md-offset-3 font-weight-bold" for="title">Title</p>
+                          <div class="col-md-offset-3">
                           <input id="title" name="event_title" value="{{ $event->event_title }}" type="text" placeholder="Title" class="form-control input-md" required>
 
                           </div>
+                            </div>
                         </div>
 
                         <!-- Textarea -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="textarea">Description</label>
-                          <div class="col-md-4">
-                            <textarea class="form-control" id="description" name="event_desc" rows="5">{{ $event->event_desc }}</textarea>
+                        <div class="form-group col-md-4">
+                            <div>
+                          <p class="col-md-offset-3 font-weight-bold " for="textarea">Description</p>
+                          <div class="col-md-offset-3">
+                            <textarea class="form-control" id="description" name="event_desc" rows="1">{{ $event->event_desc }}</textarea>
                           </div>
+                            </div>
                         </div>
 
                        <!-- Text input-->
-                       <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Presenter name</label>
-                        <div class="col-md-4">
+                       <div class="form-group col-md-4">
+                           <div>
+                        <p class="col-md-offset-3 font-weight-bold" for="textinput">Presenter name</p>
+                        <div class="col-md-offset-3">
                         <input id="presenter_name" name="event_presenter_name" type="text" value="{{ $event->event_presenter_name }}" pattern="^[a-zA-Z\s\.]+$" title="Name should only contain upper case and lower case letters,dot,space. e.g. P John, P.John" placeholder="Presenter name" class="form-control input-md" required>
                         </div>
+                           </div>
                       </div>
 
 
 
                         <!-- Text input-->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="textinput">Image</label>
-                          <img id="imageshow" style="margin-bottom:15px;"/>
+                        <div class="form-group col-md-4">
+                            <div>
+                          <label class="col-md-offset-3 font-weight-bold" for="textinput">Image</label>
+                          <img id="imageshow"/>
 
-                          <div class="col-md-4">
+                          <div class="col-md-offset-3">
                           <input id="image" name="event_image" type="file" placeholder="Image" class="form-control input-md" required>
 
                           </div>
+                            </div>
                         </div>
 
                         <!-- Text input-->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="textinput">Presenter Designation</label>
-                          <div class="col-md-4">
+                        <div class="form-group col-md-4">
+                            <div>
+                          <label class="col-md-offset-3 font-weight-bold" for="textinput">Presenter Designation</label>
+                          <div class="col-md-offset-3">
                           <input id="presenter_designation" value="{{ $event->event_presenter_designation }}" name="event_presenter_designation" type="text" placeholder="Presenter Designation" class="form-control input-md">
                           {{-- <span class="help-block">help</span> --}}
                           </div>
+                            </div>
                         </div>
 
                         <!-- Textarea -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="textarea">Presenter Org Details</label>
-                          <div class="col-md-4">
-                            <textarea class="form-control" id="presenter_org_details"  name="event_presenter_org_details">{{ $event->event_presenter_org_details }}</textarea>
+                        <div class="form-group col-md-4">
+                            <div>
+                          <label class="col-md-offset-3 font-weight-bold" for="textarea">Presenter Org Details</label>
+                          <div class="col-md-offset-3">
+                            <textarea class="form-control" id="presenter_org_details" rows="1"  name="event_presenter_org_details">{{ $event->event_presenter_org_details }}</textarea>
                           </div>
+                            </div>
                         </div>
 
 
@@ -121,76 +133,92 @@
                             </div>
                           </div>-->
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Date</label>
-                            <div class="col-md-4">
+                          <div class="form-group col-md-4">
+                              <div>
+                            <label class="col-md-offset-3 font-weight-bold" for="textinput">Event Date</label>
+                            <div class="col-md-offset-3">
                             <input id="event_date" name="event_date" value="{{ $event->event_date }}" type="date" placeholder="Event Date" class="form-control input-md" required>
                             {{-- <span class="help-block">help</span> --}}
                             </div>
+                              </div>
                           </div>
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Time</label>
-                            <div class="col-md-4">
+                          <div class="form-group col-md-4">
+                              <div>
+                            <label class="col-md-offset-3 font-weight-bold" for="textinput">Event Time</label>
+                            <div class="col-md-offset-3">
                             <input id="event_time" name="event_time" value="{{ $event->event_time }}" type="time" placeholder="Event Time" class="form-control input-md">
 
                             </div>
+                              </div>
                           </div>
 
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Duration</label>
-                            <div class="col-md-4">
+                          <div class="form-group col-md-4">
+                              <div>
+                            <label class="col-md-offset-3 font-weight-bold" for="textinput">Event Duration</label>
+                            <div class="col-md-offset-3">
                             <input id="event_duration" name="event_duration"  value="{{ $event->event_duration }}" type="text" placeholder="Event Duration" class="form-control input-md">
                             {{-- <span class="help-block">help</span> --}}
                             </div>
+                              </div>
                           </div>
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Meeting Link</label>
-                            <div class="col-md-4">
+                          <div class="form-group col-md-4">
+                              <div>
+                            <label class="col-md-offset-3 font-weight-bold" for="textinput">Event Meeting Link</label>
+                            <div class="col-md-offset-3">
                             <input id="event_meeting_link" name="event_meeting_link" value="{{ $event->event_meeting_link }}" type="text" placeholder="Event Meeting Link" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
+                              </div>
                           </div>
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Meeting Id</label>
-                            <div class="col-md-4">
+                          <div class="form-group col-md-4">
+                              <div>
+                            <label class="col-md-offset-3 font-weight-bold" for="textinput">Event Meeting Id</label>
+                            <div class="col-md-offset-3">
                             <input id="event_meeting_id" name="event_meeting_id" value="{{ $event->event_meeting_id }}" type="text" placeholder="Event Meeting Id" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
+                              </div>
                           </div>
 
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Event Meeting Password</label>
-                            <div class="col-md-4">
+                          <div class="form-group col-md-4">
+                              <div>
+                            <label class="col-md-offset-3 font-weight-bold" for="textinput">Event Meeting Password</label>
+                            <div class="col-md-offset-3">
                             <input id="event_meeting_password" name="event_meeting_password" value="{{ $event->event_meeting_password }}" type="text" placeholder="Event Meeting Password" class="form-control input-md">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
+                              </div>
                           </div>
 
 
                         <!-- Select Basic -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="selectbasic">Status</label>
-                          <div class="col-md-4">
+                        <div class="form-group col-md-4">
+                            <div>
+                          <label class="col-md-offset-3 font-weight-bold" for="selectbasic">Status</label>
+                          <div class="col-md-offset-3">
                             <select id="status" name="event_status" class="form-control" required>
                               <option value="1" {{ $event->event_status===1 ? 'selected' :'' }}>Active</option>
                               <option value="2" {{ $event->event_status===2 ? 'selected' :'' }}>Inactive</option>
                             </select>
                           </div>
+                            </div>
                         </div>
 
                         <!-- Select Basic -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="selectbasic">Category</label>
-                          <div class="col-md-4">
+                        <div class="form-group col-md-4">
+                            <div>
+                          <label class="col-md-offset-3 font-weight-bold" for="selectbasic">Category</label>
+                          <div class="col-md-offset-3">
                             <select id="event_category" name="event_category" class="form-control">
                               <option value="1" {{ $event->event_category===1 ? 'selected' :'' }}>Category one</option>
                               <option value="2" {{ $event->event_category===2 ? 'selected' :'' }}>Category two</option>
                             </select>
                           </div>
+                            </div>
                         </div>
 
 
@@ -218,9 +246,10 @@
                             </div>
                           </div>
                         </div> --}}
+                        <div style="margin-bottom: 44px"></div>
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="textinput"></label>
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-md-offset-5">
                             <input  name="submit" type="submit" class="form-control input-md btn btn-warning">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
