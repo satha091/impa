@@ -104,7 +104,7 @@
                         <div class="form-group col-md-4">
                             <div>
                           <label class="col-md-offset-3 font-weight-bold text-muted" for="textinput">Image</label>
-                          <img id="imageshow" />
+                          {{-- <img id="imageshow" /> --}}
 
                           <div class="col-md-offset-3">
                           <input id="image" name="image" type="file" placeholder="Image" class="form-control input-md">
