@@ -17,6 +17,16 @@
         background-color: white;
     }
 
+    .block-20 {
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 275px;
+        position: relative;
+        display: block;
+    }
+
 </style>
 <ul class="cd-hero-slider">
 
@@ -33,24 +43,27 @@
                     <div class="">
                         <div class="col-md-12">
                             <!--    <div class="content col-sm-6">
-                            <a href="{{ url('events') }}"> <img src="img/Arunachalam.png"></a>
-                            <h4>Dr A Arunachalam Mudaliyar Iyya</h4>
-                            <br><br>
-                            <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
+                                <a href="{{ url('events') }}"> <img src="img/Arunachalam.png"></a>
+                                <h4>Dr A Arunachalam Mudaliyar Iyya</h4>
+                                <br><br>
+                                <div style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px">
                                 <p style="color: white"><b>Knowledge Session:</b></p>
                                 <p style="color: white">How to Mange expenditure,existing business and new Startups</p>
                                 <a href="{{ url('events') }}"> <button type="button"
                                         class="btn btn-white"> Register</button></a>
-                            </div>
-                        </div>-->
+                                </div>
+                                </div>-->
 
                             @foreach($events as $event)
                                 <!-- {{ $event->id }} -->
                                 <div class="content p-20 col-sm-6 ">
                                     <a href="{{ route('guest.show',['event'=>$event->id]) }}"
-                                        class="" data-lightbox="image-4"><img
+                                        class="block-20 d-flex align-items-end"
+                                        style="background-image: url('{{ url('images/'.$event->event_image) }}');">
+                                        {{-- <img
                                             src="{{ url('images/'.$event->event_image) }}"
-                                            style="width: auto; height:250px"></a>
+                                        style="width: auto; height:250px"> --}}
+                                    </a>
                                     <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
                                     <h4>{{ $event->event_presenter_name }}</h4>
                                     <br><br>
@@ -61,17 +74,16 @@
                                     </div>
                                 </div>
                             @endforeach
-                            @if($event->id > 0)
-                                <div class="primary-button">
-                                    <a href="{{ route('guest.all') }}">More Events</a>
-                                </div>
-                            @else
-                                <div class="primary-button">
-                                    <a href="#">No Events Available</a>
-                                </div>
-                            @endif
                         </div>
-
+                        @if(count($events) > 0)
+                            <div class="primary-button">
+                                <a href="{{ route('guest.all') }}">More Events</a>
+                            </div>
+                        @else
+                            <div class="primary-button">
+                                <a href="#">No Events Available</a>
+                            </div>
+                        @endif
                         <div style="margin-top: 70px;"></div>
                     </div>
                 </div>
