@@ -12,6 +12,15 @@
     .content {
         margin-top: -70px;
     }
+    .block-20 {
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 275px;
+        position: relative;
+        display: block;
+    }
 
 </style>
 <ul class="cd-hero-slider">
@@ -33,8 +42,14 @@
                         @foreach($events as $event)
                         <!-- {{ $event->id }} -->
                         <div class="content p-20 col-sm-6 ">
-
-                                <a href="{{ route('guest.show',['event'=>$event->id]) }}" data-lightbox="image-4"><img src="{{ url('images/'.$event->event_image) }}" class="" style="height: 300px; width: auto"></a>
+                            <a href="{{ route('guest.show',['event'=>$event->id]) }}"
+                                class="block-20 d-flex align-items-end"
+                                style="background-image: url('{{ url('images/'.$event->event_image) }}');">
+                                {{-- <img
+                                    src="{{ url('images/'.$event->event_image) }}"
+                                style="width: auto; height:250px"> --}}
+                            </a>
+                              <!--  <a href="{{ route('guest.show',['event'=>$event->id]) }}" data-lightbox="image-4"><img src="{{ url('images/'.$event->event_image) }}" class="" style="height: 300px; width: auto"></a>-->
 
                           <!--  <a href="{{ route('events.show',['event'=>$event->id]) }}"> <img src="{{ 'images/'.$event->event_image }}" class="img-responsive rounded-circle " ></a>-->
                             <h4>{{ $event->event_presenter_name }}</h4>

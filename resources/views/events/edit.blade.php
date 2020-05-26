@@ -55,7 +55,7 @@
                         @method('put')
                         <fieldset>
                         <!-- Form Name -->
-                        <legend><h3>Edit Event</h3></legend>
+                        <legend><h3 class="col-md-offset-5">Edit Event</h3></legend>
 
                         <!-- Text input-->
                         <div class="form-group col-md-4">
