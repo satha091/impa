@@ -87,7 +87,7 @@ https://templatemo.com/tm-503-newline
                       @auth
 
                      <!-- <li><a href="{{ url('events') }}"><span class="glyphicon glyphicon-user"></span> Events</a></li>-->
-                      <li class="nav-item dropdown">
+                      <li style="margin-top: 60px" class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                               {{ Auth::user()->name }} <span class="caret"></span>
                           </a>

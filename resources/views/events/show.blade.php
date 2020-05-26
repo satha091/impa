@@ -12,26 +12,29 @@
 @section('page-content')
 <style>
     .content {
-        margin-top: -70px;
+        margin-top: 10px;
     }
+    .overlay{
+        height: 35%;
+    }
+
 
 </style>
 <ul class="cd-hero-slider">
 
     <li class="selected">
         <div class="heading">
-            <h1>All Events</h1>
+            <h4 style="color: white">{{ $event->event_title }}</h4>
 
 
         </div>
 
-        <div class="cd-full-width first-slide">
+
             <div class="container">
-                <div class="row" style="width: 100%">
-                    <div class="col-md-12">
 
 
-                        <div class="content card col-sm-6 col-sm-offset-3" style="background-color:#FFBF00;">
+
+                      <!--  <div class="content card col-sm-6 col-sm-offset-3" style="background-color:#FFBF00;">
                             <div class="card-body shadow" style="background-color:#ffff;box-shadow: 10px 10px 10px 10px ; ">
                                 <img src="{{ url('images/'.$event->event_image) }}" class="" width="300px" height="300px">
                                 <h4>{{ $event->event_title }}</h4>
@@ -49,7 +52,7 @@
                                                     <div style="padding-top: 30px"></div>
                                                 </div>
 
-                                                 </div>
+                                                 </div>-->
 
 
             <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -80,12 +83,10 @@
 
             </table>
             <div style="margin-top: 150px;"></div>
-        </div>
 
-        </div>
-    </div>
+
 </div>
-</div>
+
 </li>
 
 
