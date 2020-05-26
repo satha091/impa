@@ -11,6 +11,7 @@
 |
 */
 
+use App\Participants;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -34,8 +35,12 @@ Route::get('/event/{event}/register', 'GuestController@register')->name('guest.r
 Route::post('/event/{event}', 'GuestController@store')->name('guest.store');
 // Route::get('/index', 'EventController@index')->name('events.index');
 Route::group(['middleware' => ['role:admin']], function () {
-
     Route::resource('events', 'EventController');
+    Route::delete('participants/{id}', function ($id) {
+        $p=Participants::find($id);
+        $p->delete();
+        return back();
+    })->name('participants.destroy');
 });
 
 
