@@ -42,7 +42,7 @@
                             <div class="col-md-10  col-xs-offset-1" style="background-color:#FFBF00;min-height: 200px">
                                 <p style="color: white"><b>{{ $event->event_title }}</b></p>
                                 <p style="color: white">{{ $event->event_desc }}</p>
-                            
+
                                 {{-- <a href="{{ route('guest.show',['event'=>$event->id]) }}"> <button type="button"
                                     class="btn btn-white">Details</button></a> --}}
                             </div>

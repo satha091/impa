@@ -12,6 +12,9 @@
     .content {
         margin-top: -70px;
     }
+    .overlay{
+        background-color: white;
+    }
 
 </style>
 <ul class="cd-hero-slider">
@@ -57,11 +60,11 @@
                                         style="background-color:#FFBF00;padding-top:20px;padding-bottom:20px ;min-height: 200px">
                                         <p style="color: white"><b>{{ $event->event_title }}</b></p>
                                         <p style="color: white">{{ $event->event_desc }}</p>
-                                      
+
                                         {{-- <a
                                             href="{{ route('guest.show',['event'=>$event->id]) }}">
                                             <button type="button" class="btn btn-white">Details</button></a> --}}
-                                            
+
                                     </div>
                                 </div>
                             @endforeach
