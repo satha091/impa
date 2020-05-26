@@ -57,7 +57,7 @@
         <fieldset>
 
             <!-- Form Name -->
-            <legend><h3>Add Register</h3></legend>
+            <legend><h3 class="col-md-offset-4">Add Register</h3></legend>
 
 
 
@@ -69,46 +69,58 @@
                 </div>
               </div>
 
-              <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput">User name</label>
-                <div class="col-md-4">
+              <div class="form-group col-md-6">
+                  <div>
+                <p class="col-md-offset-3 font-weight-bold text-muted" for="textinput">User name</p>
+                <div class="col-md-offset-3">
                 <input id="" name="user_name" type="text" pattern="^[a-zA-Z\s\.]+$" title="Name should only contain upper case and lower case letters,dot,space. e.g. P John, P.John" placeholder="Enter User Name" class="form-control input-md" required>
                 </div>
+                  </div>
               </div>
 
-              <div class="form-group">
-                <label class="col-md-4 control-label" for="title">User Contact</label>
-                <div class="col-md-4">
+              <div class="form-group col-md-6">
+                  <div>
+                <p class="col-md-offset-3 font-weight-bold text-muted" for="title">User Contact</p>
+                <div class="col-md-offset-3">
                 <input id="" name="user_contact" type="text" placeholder="Pleser Enter Contact Details" class="form-control input-md" required>
 
                 </div>
+                  </div>
               </div>
-              <div class="form-group">
-                <label class="col-md-4 control-label" for="title">E-mail</label>
-                <div class="col-md-4">
+              <div class="form-group col-md-6">
+                  <div>
+                <p class="col-md-offset-3 font-weight-bold text-muted" for="title">E-mail</p>
+                <div class="col-md-offset-3">
                 <input id="" name="user_email" type="text" placeholder="Pleser Enter E-mail" class="form-control input-md" required>
 
                 </div>
+                  </div>
               </div>
 
-              <div class="form-group">
-                <label class="col-md-4 control-label" for="title">User Organization</label>
-                <div class="col-md-4">
+              <div class="form-group col-md-6">
+                  <div>
+                <p class="col-md-offset-3 font-weight-bold text-muted" for="title">User Organization</p>
+                <div class="col-md-offset-3">
                 <input id="" name="user_organisation" type="text" placeholder="Pleser Enter User Organisation" class="form-control input-md" required>
 
                 </div>
+                  </div>
               </div>
 
-              <div class="form-group">
-                <label class="col-md-4 control-label" for="title">Location</label>
-                <div class="col-md-4">
+              <div class="form-group col-md-6">
+                  <div>
+                <p class="col-md-offset-3 font-weight-bold text-muted" for="title">Location</p>
+                <div class="col-md-offset-3">
                 <input id="" name="user_location" type="text" placeholder="Pleser Enter Location" class="form-control input-md" required>
 
                 </div>
+                  </div>
               </div>
 
 
-
+              <div class="form-group col-md-6" style="margin-top: 60px">
+                <div></div>
+              </div>
               <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput"></label>
                 <div class="col-md-3">

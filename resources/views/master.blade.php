@@ -64,7 +64,7 @@ https://templatemo.com/tm-503-newline
                   </div>
                   <div class="collapse navbar-collapse " id="myNavbar">
                     <ul class="nav navbar-nav col-md-4">
-                        <li class="selected p-5"><a href="{{ url('/') }}"><div class=""></div><h5>Home</h5></a></li>
+                        <!--<li class="selected p-5"><a href="{{ url('/') }}"><div class=""></div><h5>Home</h5></a></li>-->
                        <!-- <li class=""><a href="{{ url('about') }}"><div class=""></div><h5>About Us</h5></a></li>
                         <li><a href="#0"><div class=""></div><h6>Featured</h6></a></li>
                         <li><a href="{{ url('project') }}"><div class=""></div><h5>Projects</h5></a></li>
@@ -73,9 +73,9 @@ https://templatemo.com/tm-503-newline
 
                     <ul class="nav navbar-nav col-md-4">
                         <li class="selected p-5"> <a  href="#"> <img class="img" src="{{ url('img/logo.png') }}" ></a></li>
-                        <a href="{{ url('/') }}"><h5 style="color: white;margin-top:30px">WELCOME TO IMPA</h5></a>
+                        <a href="{{ url('/') }}"><h3 style="color: white;margin-top:30px">WELCOME TO IMPA</h3></a>
                        <li><a href="{{ url('events') }}"><span class="glyphicon glyphicon-user"></span> Events</a></li>
-                       
+                       <li class="selected p-5"><a href="{{ url('/') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                        <!-- <li class=""><a href="{{ url('about') }}"><div class=""></div><h5>About Us</h5></a></li>
                         <li><a href="#0"><div class=""></div><h6>Featured</h6></a></li>
                         <li><a href="{{ url('project') }}"><div class=""></div><h5>Projects</h5></a></li>
@@ -107,7 +107,7 @@ https://templatemo.com/tm-503-newline
                       @else
                      <!-- <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>-->
                       @if (Route::has('register'))
-                      <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                      <li style="margin-top: 60px"><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                       @endif
                       @endauth
                       @endif
