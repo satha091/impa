@@ -50,7 +50,7 @@ https://templatemo.com/tm-503-newline
         </section>
 
         <section class="cd-hero">
-            <nav class="navbar navbar-inverse">
+            <nav class="navbar navbar-inverse" style="opacity: 0.8">
                 <div class="container-fluid">
                   <div class="navbar-header ">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -74,10 +74,11 @@ https://templatemo.com/tm-503-newline
                     <ul class="nav navbar-nav col-md-4">
                         <li class="selected p-5"> <a  href="#"> <img class="img" src="{{ url('img/logo.png') }}" ></a></li>
                         <a href="{{ url('/') }}"><h3 style="color: white;margin-top:30px">WELCOME TO IMPA</h3></a>
+                        <li class="selected p-5"><a href="{{ url('/') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                         @can('show event')
                             <li><a href="{{ url('events') }}"><span class="glyphicon glyphicon-user"></span> Events</a></li>
                         @endcan
-                       <li class="selected p-5"><a href="{{ url('/') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+
                        <!-- <li class=""><a href="{{ url('about') }}"><div class=""></div><h5>About Us</h5></a></li>
                         <li><a href="#0"><div class=""></div><h6>Featured</h6></a></li>
                         <li><a href="{{ url('project') }}"><div class=""></div><h5>Projects</h5></a></li>

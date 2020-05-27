@@ -59,7 +59,7 @@
                         <fieldset>
 
                         <!-- Form Name -->
-                        <legend><h3 class="col-md-offset-5">Add Event</h3></legend>
+                        <legend><h3 class="col-md-offset-5">Add New Event</h3></legend>
 
                         <!-- Text input-->
                         <div class="form-group col-md-4 ">
@@ -269,17 +269,21 @@
                         </div> --}}
                         <div style="margin-bottom: 24px"></div>
                         <div class="form-group col-md-5 ">
-                            <label class="col-md-4 control-label" for="textinput"></label>
-                            <div class="col-md-6 col-md-offset-12">
-                            <input  name="submit" type="submit" class="form-control input-md btn btn-warning">
+                            <label class="col-md-offset-9 control-label" for="textinput"></label>
+                            <div class="col-md-6 col-md-offset-9">
+                            <input  name="submit" type="submit" class="form-control input-md btn btn-warning" style="border-radius: 10px">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
                           </div>
-
+                          <div class="form-group col-md-5 col-md-offset-8">
+                          <div class="col-md-5 col-md-offset-5 text-center " style="background-color: #f0ad4e;margin-top:8px;padding:8px 2px 8px 2px;border-radius: 10px;">
+                          <a href="{{ url('events')}}" style="color: white !important">Back</a>
+                        </div>
+                          </div>
 
                         </fieldset>
                         </form>
-                        <div style="margin-bottom: 24px"></div>
+                        <div style="margin-bottom: 34px"></div>
                     </div>
                 </div>
             </div>

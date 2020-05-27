@@ -55,7 +55,7 @@
 
                                          </div>-->
 
-                                         <div class="content card col-sm-6" style="padding-bottom:20px">
+                                         <div class="content card col-sm-6" style="padding-bottom:20px;height:450px">
 
 
                                             <div class="card-body shadow" style="">
@@ -69,12 +69,12 @@
                                                 <h4>{{ $event->event_title }}</h4>
                                                                    </div>
                                                                    <a href="{{ route('guest.register',['event'=>$event->id]) }}">    <button type="button"
-                                                                    class="btn btn-white">Register</button></a>
+                                                                    class="btn btn-white" style="margin-top:33px">Register</button></a>
 
                                                                  </div>
 
 
-                                                                 <div class="content card col-sm-6" style="">
+                                                                 <div class="content card col-sm-6" style="height:450px">
 
 
                                                                     <div class="card-body" style=" ">
