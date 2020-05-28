@@ -56,7 +56,7 @@
 
                             @foreach($events as $event)
                                 <!-- {{ $event->id }} -->
-                                <div class="content p-20 col-sm-6 ">
+                                <div class="content p-20 col-sm-5 col-md-offset-1 ">
                                     <a href="{{ route('guest.show',['event'=>$event->id]) }}"
                                         class="block-20 d-flex align-items-end"
                                         style="background-image: url('{{ url('images/'.$event->event_image) }}');">
