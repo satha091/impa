@@ -91,12 +91,12 @@ https://templatemo.com/tm-503-newline
 
                      <!-- <li><a href="{{ url('events') }}"><span class="glyphicon glyphicon-user"></span> Events</a></li>-->
                       <li style="margin-top: 60px" class="nav-item dropdown">
-                          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                          <a id="navbarDropdown" class="nav-link dropdown-toggle glyphicon glyphicon-users" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                               {{ Auth::user()->name }} <span class="caret"></span>
                           </a>
 
                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item col-md-offset-7" href="{{ route('logout') }}"
+                              <a class="dropdown-item col-md-offset-4 glyphicon glyphicon-log-out" href="{{ route('logout') }}"
                                  onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">
                                   {{ __('Logout') }}
