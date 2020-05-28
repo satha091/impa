@@ -50,7 +50,7 @@ https://templatemo.com/tm-503-newline
         </section>
 
         <section class="cd-hero">
-            <nav class="navbar navbar-inverse" style="opacity: 0.8">
+            <nav class="navbar navbar-inverse" style="opacity: 0.5">
                 <div class="container-fluid">
                   <div class="navbar-header ">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -96,7 +96,7 @@ https://templatemo.com/tm-503-newline
                           </a>
 
                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="{{ route('logout') }}"
+                              <a class="dropdown-item col-md-offset-7" href="{{ route('logout') }}"
                                  onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">
                                   {{ __('Logout') }}
