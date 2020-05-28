@@ -10,6 +10,11 @@
 @endsection
 
 @section('page-content')
+<style>
+.overlay{
+    height: 800px;
+}
+    </style>
 <div class="container" style="background-color:#fff;">
 
     {{-- <div class="alert alert-success" id="success-alert">
@@ -249,16 +254,20 @@
                         <div style="margin-bottom: 44px"></div>
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="textinput"></label>
-                            <div class="col-md-3 col-md-offset-5">
-                            <input  name="submit" type="submit" class="form-control input-md btn btn-warning">
+                            <div class="col-md-3 col-md-offset-4">
+                            <input  name="submit" type="submit" class="form-control input-md btn btn-warning" style="margin-top:8px;padding:8px 2px 8px 2px;border-radius: 10px;">
                             {{-- {-- <span class="help-block">help</span> --}}
                             </div>
                           </div>
-
+                          <div class="form-group col-md-5 col-md-offset-8">
+                            <div class="col-md-5 col-md-offset-12 text-center " style="background-color: #f0ad4e;margin-top:8px;padding:8px 2px 8px 2px;border-radius: 10px;">
+                            <a href="{{ url('events')}}" style="color: white !important">Back</a>
+                          </div>
+                            </div>
 
                         </fieldset>
                         </form>
-                        <div style="margin-bottom: 44px"></div>
+                        <div style="margin-bottom: 34px"></div>
                     </div>
                 </div>
             </div>

@@ -125,11 +125,15 @@
               <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput"></label>
                 <div class="col-md-3">
-                <input  name="submit" type="submit" class="form-control input-md btn btn-warning">
+                <input  name="submit" type="submit" class="form-control input-md btn btn-warning" style="margin-top:8px;padding:8px 2px 8px 2px;border-radius: 10px;">
                 {{-- {-- <span class="help-block">help</span> --}}
                 </div>
               </div>
-
+              <div class="form-group col-md-5 col-md-offset-5">
+                <div class="col-md-7 col-md-offset-11 text-center " style="background-color: #f0ad4e;margin-top:8px;padding:8px 2px 8px 2px;border-radius: 10px;">
+                <a href="{{ url()->previous()}}" style="color: white !important">Back</a>
+              </div>
+                </div>
 
       <!--  <input type="text" name="event_id" value={{ $event_id }} id="">
         <input type="text" name="user_name" id="" placeholder="Name">
